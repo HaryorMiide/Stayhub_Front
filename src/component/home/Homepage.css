@@ -1,0 +1,339 @@
+/* Base Styles */
+.stayhub-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%; /* Fallback */
+  overflow: auto; /* Ensure content scrolls if needed */
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+}
+
+/* Light Mode (default) */
+.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+      no-repeat center center;
+  background-size: cover;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.explore-btn {
+  padding: 0.8rem 2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.explore-btn:hover {
+  background-color: #3e8e41;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Search Section */
+.search-section {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-field {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.search-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.search-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Why Choose Us Section */
+.why-section {
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.why-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.why-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-dropdown {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  transition: border-color 0.3s;
+}
+
+.faq-dropdown:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: left;
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1rem auto;
+  display: block;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: fit-content;
+}
+
+.mode-toggle:hover {
+  background-color: #3e8e41;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .why-content {
+    text-align: center;
+  }
+
+  .why-content p {
+    font-size: 1rem;
+  }
+
+  .faq-section {
+    padding: 2rem 1rem;
+  }
+
+  .mode-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .search-section {
+    padding: 2rem 1rem;
+  }
+
+  .why-section h2,
+  .faq-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .why-content p {
+    font-size: 0.95rem;
+  }
+}
