@@ -161,9 +161,9 @@ const Homepage = () => {
         </div>
       </section>
 
-      <footer className="footer">
+      {/* <footer className="footer">
         <p>Stayhub | All Right Reserved © 2025</p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
