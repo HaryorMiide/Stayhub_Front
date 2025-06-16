@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./HomePage.css";
+import "../home/Homepage.css"; // Assuming you have a CSS file for styling
 
 const faqsData = [
   {
@@ -142,24 +142,22 @@ const Homepage = () => {
       <section className="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div className="faq-container">
-          <select
-            className="faq-dropdown"
-            onChange={(e) => {
-              const index = e.target.value;
-              setActiveFaq(index !== "" ? parseInt(index) : null);
-            }}
-            value={activeFaq !== null ? activeFaq : ""}
-          >
-            <option value="">Select a Question</option>
-            {faqsData.map((faq, index) => (
-              <option key={index} value={index}>
-                {faq.question}
-              </option>
-            ))}
-          </select>
-          {activeFaq !== null && (
-            <div className="faq-answer">{faqsData[activeFaq].answer}</div>
-          )}
+          {faqsData.map((faq, index) => (
+            <div
+              key={index}
+              className={`faq-item ${activeFaq === index ? "active" : ""}`}
+              onClick={() => toggleFaq(index)}
+            >
+              <div className="faq-question">
+                <h4>{faq.question}</h4>
+              </div>
+              {activeFaq === index && (
+                <div className="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
